@@ -310,3 +310,11 @@ body {
 .education-container {
     margin-top: -10px;
 }
+
+
+.material-icons {
+    font-size: 30px; /* Dimensiunea iconiței */
+    color: #e74c3c;  /* Culoarea iconiței */
+    vertical-align: middle; /* Aliniere verticală */
+    margin-right: 10px; /* Spațiu între iconiță și text */
+}
