@@ -318,7 +318,29 @@ body {
 
 .icon {
     font-size: 30px; /* Dimensiunea iconiței */
-    color: #3498db;  /* Culoarea iconiței */
+    color: #161d2a;  /* Culoarea iconiței */
     margin-right: 10px; /* Spațiu între iconiță și text */
+}
+
+
+
+.social-icon {
+    font-size: 30px; /* Dimensiunea iconițelor */
+    margin-right: 10px; /* Spațiu între iconiță și text */
+    color: #333;  /* Culoarea implicită a iconițelor */
+    transition: color 0.3s ease; /* Efect de tranziție pentru schimbarea culorii */
+}
+
+/* Modificarea culorii iconițelor la hover */
+.social-icon:hover {
+    color: #0077b5; /* Culoare LinkedIn pentru hover */
+}
+
+.fab.fa-github:hover {
+    color: #333; /* Culoare GitHub pentru hover */
+}
+
+.fab.fa-instagram:hover {
+    color: #E1306C; /* Culoare Instagram pentru hover */
 }
 
