@@ -315,3 +315,10 @@ body {
 .flip-horizontal {
     transform: scaleX(-1);  /*Flip orizontal*/
 }
+
+.icon {
+    font-size: 30px; /* Dimensiunea iconiței */
+    color: #3498db;  /* Culoarea iconiței */
+    margin-right: 10px; /* Spațiu între iconiță și text */
+}
+
