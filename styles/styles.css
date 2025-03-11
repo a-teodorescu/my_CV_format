@@ -313,8 +313,8 @@ body {
 
 
 .material-icons {
-    font-size: 30px; /* Dimensiunea iconiței */
-    color: #e74c3c;  /* Culoarea iconiței */
+    font-size: 15px; /* Dimensiunea iconiței */
+    color: #161d2a;  /* Culoarea iconiței */
     vertical-align: middle; /* Aliniere verticală */
     margin-right: 10px; /* Spațiu între iconiță și text */
 }
