@@ -112,6 +112,31 @@ body {
     margin-left: -10px;
 }
 
+.language-skills-section {
+    padding-left: 40px;
+    margin-top: 40px;
+}
+
+.language-skills-header {
+    color: #161d2a;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.language-skills-list {
+    color: #161d2a;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    margin-top: -10px;
+    margin-left: -10px;
+}
+
+
+
 /* Main content Styles */
 .right-side-container {
     padding-left: 88px;
