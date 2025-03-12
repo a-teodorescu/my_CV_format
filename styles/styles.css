@@ -66,7 +66,6 @@ body {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
-    margin-right: 5px;
 }
 
 .tech-skills-section {
@@ -353,7 +352,7 @@ body {
     display: flex;
     flex-direction:row /* Am setat directionarea la orizontala */
     justify-content: flex-start; /* Aliniere la stânga */
-    gap: 30px;  /* Space between icons */
+    gap: 20px;  /* Space between icons */
     margin-top: 20px;
 }
 
