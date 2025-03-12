@@ -319,7 +319,7 @@ body {
 .icon {
     font-size: 20px; /* Dimensiunea iconiței */
     color: #161d2a;  /* Culoarea iconiței */
-    margin-right: 2px; /* Spațiu între iconiță și text */
+    margin-right: 10px; /* Spațiu între iconiță și text */
 }
 
 
