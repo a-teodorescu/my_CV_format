@@ -324,9 +324,12 @@ body {
 
 
 
+
+
+/* Style for contact elements */
 .contacts-phone, .contacts-email, .contacts-link {
     font-size: 16px;
-    color: #161d2a;
+    color: #0073e6;
     text-decoration: none;
 }
 
@@ -339,8 +342,7 @@ body {
     transform: scaleX(-1); /* Flip orizontal */
 }
 
-
-
+/* Social media icons styling */
 .social-icons {
     display: flex;
     justify-content: center;
