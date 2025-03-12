@@ -24,6 +24,8 @@ body {
 
 .contacts-container {
     padding-left: 40px;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
 .contacts-header {
@@ -323,7 +325,11 @@ body {
 }
 
 
-
+.contacts-element {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
 
 .contacts-element i {
     font-size: 20px;
