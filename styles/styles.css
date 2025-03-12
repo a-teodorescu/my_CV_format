@@ -317,17 +317,13 @@ body {
 
 
 .icon {
-    font-size: 30px; /* Dimensiunea iconiței */
+    font-size: 20px; /* Dimensiunea iconiței */
     color: #161d2a;  /* Culoarea iconiței */
     margin-right: 10px; /* Spațiu între iconiță și text */
 }
 
 
-.contacts-element {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-}
+
 
 .contacts-element i {
     font-size: 20px;
