@@ -66,6 +66,7 @@ body {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
+    margin-right: 5px;
 }
 
 .tech-skills-section {
