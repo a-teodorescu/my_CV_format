@@ -62,7 +62,7 @@ body {
 }
 
 .contacts-element {
-    margin-top: -12px;
+    /*margin-top: -12px;*/
     display: flex;
     align-items: center;
     margin-bottom: 10px;
