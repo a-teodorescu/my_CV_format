@@ -323,7 +323,7 @@ body {
 
 
 .contacts-element i {
-    font-size: 20px;
+    font-size: 16px;
     margin-right: 10px;
     color: #333;
 }
@@ -347,7 +347,8 @@ body {
 /* Social media icons styling */
 .social-icons {
     display: flex;
-    justify-content: center;
+    flex-direction:row /* Am setat directionarea la orizontala */
+    justify-content: flex-start; /* Aliniere la stânga */
     gap: 30px;  /* Space between icons */
     margin-top: 20px;
 }
