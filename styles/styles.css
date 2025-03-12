@@ -324,23 +324,45 @@ body {
 
 
 
-.social-icon {
-    font-size: 30px; /* Dimensiunea iconițelor */
-    margin-right: 10px; /* Spațiu între iconiță și text */
-    color: #333;  /* Culoarea implicită a iconițelor */
-    transition: color 0.3s ease; /* Efect de tranziție pentru schimbarea culorii */
+.contacts-phone, .contacts-email, .contacts-link {
+    font-size: 16px;
+    color: #161d2a;
+    text-decoration: none;
 }
 
-/* Modificarea culorii iconițelor la hover */
-.social-icon:hover {
-    color: #0077b5; /* Culoare LinkedIn pentru hover */
+.contacts-phone:hover, .contacts-email:hover, .contacts-link:hover {
+    text-decoration: underline;
+    color: #005bb5;
 }
 
-.fab.fa-github:hover {
-    color: #333; /* Culoare GitHub pentru hover */
+.flip-horizontal {
+    transform: scaleX(-1); /* Flip orizontal */
 }
 
-.fab.fa-instagram:hover {
-    color: #E1306C; /* Culoare Instagram pentru hover */
+
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;  /* Space between icons */
+    margin-top: 20px;
 }
 
+.social-icons a {
+    display: flex;
+    align-items: center;
+    font-size: 24px;  /* Increase icon size */
+    color: #333;     /* Default icon color */
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;  /* Smooth transition for hover */
+}
+
+.social-icons a:hover {
+    color: #0077b5;  /* Change color on hover */
+    transform: scale(1.2);  /* Slightly enlarge the icon when hovered */
+}
+
+/* Optional: Add space between icon and text */
+.social-icons i {
+    margin-right: 8px;
+}
