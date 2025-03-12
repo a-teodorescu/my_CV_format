@@ -339,13 +339,13 @@ body {
 
 /* Style for contact elements */
 .contacts-phone, .contacts-email, .contacts-link {
-    font-size: 16px;
+    font-size: 10px;
     color: #161d2a;
     text-decoration: none;
 }
 
 .contacts-phone:hover, .contacts-email:hover, .contacts-link:hover {
-    text-decoration: underline;
+    text-decoration: none;  /*could be underline*/
     color: #005bb5;
 }
 
