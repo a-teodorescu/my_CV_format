@@ -329,7 +329,7 @@ body {
 /* Style for contact elements */
 .contacts-phone, .contacts-email, .contacts-link {
     font-size: 16px;
-    color: #0073e6;
+    color: #161d2a;
     text-decoration: none;
 }
 
@@ -346,14 +346,14 @@ body {
 .social-icons {
     display: flex;
     justify-content: center;
-    gap: 20px;  /* Space between icons */
+    gap: 30px;  /* Space between icons */
     margin-top: 20px;
 }
 
 .social-icons a {
     display: flex;
     align-items: center;
-    font-size: 24px;  /* Increase icon size */
+    font-size: 30px;  /* Increase icon size */
     color: #333;     /* Default icon color */
     text-decoration: none;
     transition: transform 0.3s ease, color 0.3s ease;  /* Smooth transition for hover */
