@@ -356,7 +356,7 @@ body {
 .social-icons a {
     display: flex;
     align-items: center;
-    font-size: 10px;  /* Increase icon size */
+    font-size: 24px;  /* Increase icon size */
     color: #333;     /* Default icon color */
     text-decoration: none;
     transition: transform 0.3s ease, color 0.3s ease;  /* Smooth transition for hover */
