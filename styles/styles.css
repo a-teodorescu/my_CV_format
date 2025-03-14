@@ -456,18 +456,13 @@ embed {
 
 
 /* Conținutul pop-up-ului */
-#popup-content img,
-#popup-content embed {
-    max-width: 100%;
-    max-height: 80vh; /* Adaptează înălțimea pentru a nu depăși înălțimea vizibilă */
+#popup-content {
+    max-width: 80%;
+    max-height: 80vh;
+    overflow: auto; /* Adaptează înălțimea pentru a nu depăși înălțimea vizibilă */
 
-.image-popup img {
-    max-width: 90%;
-    max-height: 90%;
-    margin: 20px;
-}
-
-.image-popup embed {
-    max-width: 90%;
-    max-height: 90%;
+/* Stil pentru imagine */
+#popup-content img {
+    width: 100%;
+    height: auto;
 }
