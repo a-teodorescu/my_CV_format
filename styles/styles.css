@@ -390,7 +390,7 @@ body {
 .telegram-icon {
     cursor: pointer;
     margin-left: 10px;
-    font-size: 10px;
+    font-size: 15px;
     color: #0073e6;  /* Culoare albastră pentru iconiță */
     transition: transform 0.3s ease, color 0.3s ease; /* Adaugă tranziție lină */
 }
