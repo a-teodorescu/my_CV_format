@@ -346,7 +346,7 @@ body {
     text-decoration: none;
 }
 
-.contacts-phone:hover, .contacts-email:hover, .contacts-link:hover {
+.contacts-phone:hover, .contacts-email:hover, .contacts-link:hover{
     text-decoration: none;  /*could be underline*/
     color: #005bb5;
 }
@@ -392,8 +392,18 @@ body {
     margin-left: 10px;
     font-size: 20px;
     color: #0073e6;  /* Culoare albastră pentru iconiță */
-    align-items: center;
-    text-align: center;
+    transition: transform 0.3s ease, color 0.3s ease; /* Adaugă tranziție lină */
+}
+
+/* Efectul de hover pentru iconițele de social media */
+.telegram-icon:hover,
+.fab.fa-linkedin:hover,
+.fab.fa-github:hover,
+.fab.fa-instagram:hover,
+.fas.fa-phone:hover,
+.fas.fa-envelope:hover {
+    transform: scale(1.2); /* Crește dimensiunea iconiței */
+    color: #ff5722; /* Culoare schimbată la hover (poți ajusta culoarea după preferințe) */
 }
 
 /* Pop-up pentru imagine */
@@ -407,7 +417,22 @@ body {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8);  /* Fundal semi-transparent */
     justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 
+/* Stilul imaginii din pop-up */
+.popup-image {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 10px;
+    transition: transform 0.3s ease; /* Adaugă o tranziție lină pentru zoom */
+}
+
+/* Efect de hover pe imaginea din pop-up */
+.popup-image:hover {
+    transform: scale(1.05); /* Mărește puțin imaginea la hover */
+}
 
 /* Butonul de închidere din pop-up */
 .close-btn {
