@@ -396,12 +396,7 @@ body {
 }
 
 /* Efectul de hover pentru iconițele de social media */
-.telegram-icon:hover,
-.fab.fa-linkedin:hover,
-.fab.fa-github:hover,
-.fab.fa-instagram:hover,
-.fas.fa-phone:hover,
-.fas.fa-envelope:hover {
+.telegram-icon:hover {
     transform: scale(1.2); /* Crește dimensiunea iconiței */
     color: #ff5722; /* Culoare schimbată la hover (poți ajusta culoarea după preferințe) */
 }
