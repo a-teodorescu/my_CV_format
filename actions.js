@@ -1,4 +1,3 @@
-javascript
 // Obținem toate iconițele de telegramă
 const telegramIcons = document.querySelectorAll('.telegram-icon');
 const imagePopup = document.getElementById('image-popup');
