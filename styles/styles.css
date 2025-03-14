@@ -440,8 +440,22 @@ body {
     cursor: pointer;
 }
 
+/* Efectul de hover pe butonul de închidere */
 .close-btn:hover,
 .close-btn:focus {
     color: #f44336;
     text-decoration: none;
+}
+
+/* Embed pentru fișiere PDF */
+embed {
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+
+/* Imagine pentru pop-up */
+#popup-content img {
+    width: 100%;
+    height: auto;
 }
