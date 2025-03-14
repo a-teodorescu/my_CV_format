@@ -11,7 +11,7 @@ telegramIcons.forEach(icon => {
         const fileExtension = fileSrc.split('.').pop().toLowerCase(); // Obținem extensia fișierului
 
         // Resetăm conținutul pop-up-ului (pentru a evita acumularea de conținut vechi)
-        imagePopup.innerHTML = <span id="close-btn" class="close-btn">&times;</span>;
+imagePopup.innerHTML = <span id="close-btn" class="close-btn">&times;</span>;
 
         // Verificăm tipul fișierului (PDF sau imagine)
         if (fileExtension === 'pdf') {
@@ -33,8 +33,7 @@ closeBtn.addEventListener('click', function() {
 
 // Închidem pop-up-ul dacă se face click în afara acestuia
 window.addEventListener('click', function(event) {
-if (event.target === imagePopup) {
+    if (event.target === imagePopup) {
         imagePopup.style.display = 'none';  // Ascundem pop-up-ul
     }
 });
-
