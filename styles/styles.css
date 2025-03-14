@@ -459,3 +459,14 @@ body {
     width: 100%;
     height: auto;
 }
+
+.image-popup img {
+    max-width: 90%;
+    max-height: 90%;
+    margin: 20px;
+}
+
+.image-popup embed {
+    max-width: 90%;
+    max-height: 90%;
+}
