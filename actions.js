@@ -1,4 +1,4 @@
-```javascript
+javascript
 // Obținem toate iconițele de telegramă
 const telegramIcons = document.querySelectorAll('.telegram-icon');
 const imagePopup = document.getElementById('image-popup');
@@ -37,4 +37,4 @@ if (event.target === imagePopup) {
         imagePopup.style.display = 'none';  // Ascundem pop-up-ul
     }
 });
-```
+
