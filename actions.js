@@ -17,9 +17,9 @@ telegramIcons.forEach(icon => {
         // Verificăm tipul fișierului (PDF sau imagine)
         if (fileExtension === 'pdf') {
             // Dacă fișierul este un PDF, îl încărcăm într-un tag <embed>
+            popupContent.innerHTML = <embed src="${fileSrc}" type="application/pdf" width="100%" height="600px" />;
 
-popupContent.innerHTML = `<embed src="fileSrc" type="application/pdf" width="100
-         else if (['jpg', 'jpeg', 'png', 'gif'].includes(fileExtension)) 
+        else if (['jpg', 'jpeg', 'png', 'gif'].includes(fileExtension)) 
             // Dacă fișierul este o imagine, îl încărcăm într-un tag <img>
             popupContent.innerHTML = <img src="{fileSrc}" alt="Certificate Image" style="max-width: 100%; max-height: 80vh;" />;
         }
