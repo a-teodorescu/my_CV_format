@@ -263,6 +263,13 @@ body {
     margin-top: -10px;
 }
 
+.company-description-header{
+    color: #595959;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;   
+}
+
 .company-elements-list {
     color: #595959;
     font-size: 14px;
