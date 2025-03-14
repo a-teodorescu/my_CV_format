@@ -418,9 +418,11 @@ body {
 
 /* Stilul imaginii din pop-up */
 .popup-image {
-    max-width: 80%;
-    max-height: 80%;
+    max-width: 90%;
+    max-height: 80vh;
     border-radius: 10px;
+    object-fit: contain;
+    cursor: zoom-in; /* Cursorul devine ca pentru zoom */
     transition: transform 0.3s ease; /* Adaugă o tranziție lină pentru zoom */
 }
 
