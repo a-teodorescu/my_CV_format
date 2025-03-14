@@ -382,3 +382,46 @@ body {
 .social-icons i {
     margin-right: 8px;
 }
+
+
+
+
+/* Stilizarea iconiței Telegram */
+.telegram-icon {
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 20px;
+    color: #0073e6;  /* Culoare albastră pentru iconiță */
+    align-items: center;
+    text-align: center;
+}
+
+/* Pop-up pentru imagine */
+.image-popup {
+    display: none; /* Este ascuns inițial */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);  /* Fundal semi-transparent */
+    justify-content: center;
+
+
+/* Butonul de închidere din pop-up */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #f44336;
+    text-decoration: none;
+}
