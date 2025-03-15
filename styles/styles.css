@@ -462,6 +462,8 @@ body {
     max-width: 90%;
     max-height: 80vh;
     transition: transform 0.3s ease;
+    background-color: transparent !important;  /* Înlăturăm fundalul alb */
+}
 }
 
 
@@ -491,6 +493,11 @@ body {
     text-decoration: none;
 }
 
+/* Schimbarea culorii butonului X la hover */
+.close-btn:hover {
+    color: #007bff;  /* Schimbarea culorii butonului X la albastru */
+    cursor: pointer;  /* Schimbăm cursorul pentru a arăta că este clicabil */
+}
 
 
 
@@ -538,14 +545,14 @@ body {
     transform: translateY(-50%);
 }
 
-/* Efect hover pentru hobby items */
-.hobby-item {
-    cursor: pointer;
-    transition: transform 0.3s;
+/* Efectul de hover pentru iconițele de camera din lista Hobbies */
+.hobby-item i {
+    transition: transform 0.3s ease, color 0.3s ease; /* Efecte pentru transformare si culoare */
 }
 
-.hobby-item:hover {
-    transform: scale(1.1);
+.hobby-item i:hover {
+    transform: scale(1.2);  /* Mărirea iconiței */
+    color: #007bff;  /* Schimbarea culorii la albastru */
 }
 
 
@@ -569,5 +576,17 @@ body {
     right: 10px;
     font-size: 30px;
     color: white;
+    cursor: pointer;
+}
+
+
+/* Asigură că iconițele din lista Hobbies sunt aliniate corect */
+.hobby-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hobby-item i {
     cursor: pointer;
 }
