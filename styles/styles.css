@@ -477,24 +477,25 @@ body {
 }
 
 
-.nav-button {
+.popup-nav-btn {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
     padding: 10px;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 24px;
 }
 
 #prev-image {
-    left: 10px;
+    left: 0;
+    transform: translateY(-50%);
 }
 
 #next-image {
-    right: 10px;
+    right: 0;
+    transform: translateY(-50%);
 }
 
 /* Efect hover pentru hobby items */
@@ -505,6 +506,20 @@ body {
 
 .hobby-item:hover {
     transform: scale(1.1);
+}
+
+
+
+/* Stiluri pentru iconița de cameră */
+.hobby-icon {
+    cursor: pointer;
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Efect de hover */
+.hobby-icon:hover {
+    transform: scale(1.2); /* Mărim iconița la hover */
 }
 
 
