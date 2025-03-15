@@ -579,14 +579,3 @@ body {
     cursor: pointer;
 }
 
-
-/* Asigură că iconițele din lista Hobbies sunt aliniate corect */
-.hobby-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.hobby-item i {
-    cursor: pointer;
-}
