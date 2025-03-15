@@ -1,53 +1,55 @@
-// Obținem toate elementele de hobby
-const hobbyItems = document.querySelectorAll('.hobby-item');
-const hobbyPopup = document.getElementById('hobby-popup');
+// Obținem toate iconițele de hobby
+const hobbyIcons = document.querySelectorAll('.hobby-icon');
+const popup = document.getElementById('popup');
 const popupImage = document.getElementById('popup-image');
-const closeHobbyPopup = document.getElementById('close-hobby-popup');
-const prevImage = document.getElementById('prev-image');
-const nextImage = document.getElementById('next-image');
+const closeBtn = document.getElementById('popup-close');
+const prevBtn = document.getElementById('prev-image');
+const nextBtn = document.getElementById('next-image');
 
-// Variabile pentru imagini și navigare
+// Variabile pentru controlul imaginilor
 let currentImageIndex = 0;
-let hobbyImages = [];
+let images = [];
 
-// Când se dă click pe un element de hobby
-hobbyItems.forEach(item => {
-    item.addEventListener('click', function() {
-        // Obținem imaginile asociate fiecărui hobby
-        hobbyImages = JSON.parse(this.getAttribute('data-images'));
-        currentImageIndex = 0; // Pornim de la prima imagine
-
-        // Setăm imaginea inițială
-        popupImage.src = hobbyImages[currentImageIndex];
-        
-        // Afișăm pop-up-ul
-        hobbyPopup.style.display = 'flex';
+// Când se dă click pe iconița de hobby
+hobbyIcons.forEach(icon => {
+    icon.addEventListener('click', function() {
+        // Obținem imaginile din atributul data-images
+        images = this.getAttribute('data-images').split(',');
+        currentImageIndex = 0; // Începem cu prima imagine
+        popupImage.src = images[currentImageIndex]; // Setăm sursa imaginii
+        popup.style.display = 'flex'; // Afișăm pop-up-ul
     });
 });
 
-// Când se dă click pe butonul de închidere
-closeHobbyPopup.addEventListener('click', function() {
-    hobbyPopup.style.display = 'none'; // Ascundem pop-up-ul
+// Când se apasă pe butonul de închidere al pop-up-ului
+closeBtn.addEventListener('click', function() {
+    popup.style.display = 'none'; // Ascundem pop-up-ul
 });
 
-// Navigare între imagini
-prevImage.addEventListener('click', function() {
-    if (currentImageIndex > 0) {
-        currentImageIndex--;
-        popupImage.src = hobbyImages[currentImageIndex];
+// Când se face click pe imagine pentru zoom in/zoom out
+popupImage.addEventListener('click', function() {
+    if (popupImage.style.transform === 'scale(1.5)') {
+        popupImage.style.transform = 'scale(1)'; // Zoom out
+    } else {
+        popupImage.style.transform = 'scale(1.5)'; // Zoom in
     }
 });
 
-nextImage.addEventListener('click', function() {
-    if (currentImageIndex < hobbyImages.length - 1) {
-        currentImageIndex++;
-        popupImage.src = hobbyImages[currentImageIndex];
-    }
+// Când se apasă pe butonul "Prev" (imaginea anterioară)
+prevBtn.addEventListener('click', function() {
+    currentImageIndex = (currentImageIndex > 0) ? currentImageIndex - 1 : images.length - 1;
+    popupImage.src = images[currentImageIndex];
 });
 
-// Închidem pop-up-ul dacă se face click în afacerea acestuia
+// Când se apasă pe butonul "Next" (imaginea următoare)
+nextBtn.addEventListener('click', function() {
+    currentImageIndex = (currentImageIndex < images.length - 1) ? currentImageIndex + 1 : 0;
+    popupImage.src = images[currentImageIndex];
+});
+
+// Închidem pop-up-ul dacă se face click în afara imaginii
 window.addEventListener('click', function(event) {
-    if (event.target === hobbyPopup) {
-        hobbyPopup.style.display = 'none'; // Ascundem pop-up-ul
+    if (event.target === popup) {
+        popup.style.display = 'none';
     }
 });
