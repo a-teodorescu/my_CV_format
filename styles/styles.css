@@ -416,6 +416,37 @@ body {
     text-align: center;
 }
 
+
+
+
+/* Pop-up pentru imagini - Hobbies */
+.popup {
+    display: none;      /* Este ascuns inițial */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);  /* Fundal semi-transparent */
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+/* Pop-up pentru imagini - Certificates */
+.image-popup {
+    display: none;   /* Este ascuns inițial */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);  /* Fundal semi-transparent */
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
 /* Stilul imaginii din pop-up */
 .popup-image {
     max-width: 90%;
@@ -425,6 +456,15 @@ body {
     cursor: zoom-in; /* Cursorul devine ca pentru zoom */
     transition: transform 0.3s ease; /* Adaugă o tranziție lină pentru zoom */
 }
+
+/* Stiluri pentru imagine */
+.popup-image {
+    max-width: 90%;
+    max-height: 80vh;
+    transition: transform 0.3s ease;
+}
+
+
 
 /* Efect de hover pe imaginea din pop-up */
 .popup-image:hover {
@@ -522,4 +562,12 @@ body {
     transform: scale(1.2); /* Mărim iconița la hover */
 }
 
-
+/* Buton de închidere */
+.popup-close, .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
