@@ -519,7 +519,7 @@ body {
     position: relative;
     max-width: 80%;
     max-height: 80%;
-    background: white;
+    background: transparent;   /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
     text-align: center;
 }
 
