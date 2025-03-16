@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const hobby = this.getAttribute('data-hobby'); // Obținem hobby-ul selectat
 
             // Cerem imagini din folderul corespunzător hobby-ului
-            fetch(get_images.php?hobby=${hobby})
+            fetch(`get_images.php?hobby=${hobby}`)
                 .then(response => response.json())
                 .then(imagePaths => {
                     images = imagePaths;
