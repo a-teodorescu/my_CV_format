@@ -41,7 +41,7 @@ closeBtn.addEventListener('click', function() {
 // Funcție pentru a arăta imaginea curentă
 function showImage(index) {
     if (index >= 0, index < images.length) {
-        popupContent.innerHTML = <`img src="images/{images[index]}" alt="Image" style="max-width: 100%; max-height: 80vh;"/>`;
+        popupContent.innerHTML = `<img src="images/{images[index]}" alt="Image" style="max-width: 100%; max-height: 80vh;"/>`;
     }
 }
 
