@@ -1,9 +1,5 @@
 // ------------------- POP-UP pentru Hobbies -------------------
 
-
-// ------------------- POP-UP pentru Hobbies -------------------
-
-javascript
 document.addEventListener('DOMContentLoaded', function() {
     // Selectăm toate iconițele de cameră din secțiunea "Hobbies"
     const cameraIcons = document.querySelectorAll('.hobby-icon');
