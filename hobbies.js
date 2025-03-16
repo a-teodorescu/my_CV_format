@@ -62,16 +62,16 @@ document.addEventListener('DOMContentLoaded', function () {
         zoomInButton.addEventListener('click', function () {
         scale *= 1.2; // Mărim escala
         imageContainer.style.transform = `scale(scale)`; // Folosim template literal pentru a aplica transformarea
-);
+        });
 
-        zoomOutButton.addEventListener('click', function () 
+        zoomOutButton.addEventListener('click', function () {
         scale /= 1.2; // Micșorăm scala
         imageContainer.style.transform = `scale({scale})`; // Folosim template literal pentru a aplica transformarea
-});
+        });
 
 
 
- // Butonul de închidere al pop-up-ului
+        // Butonul de închidere al pop-up-ului
         document.getElementById('close-btn').addEventListener('click', closePopup);
 
         // Săgețile pentru navigare între imagini
@@ -110,14 +110,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Eveniment de click pe iconițele Telegram
     telegramIcons.forEach(icon => 
-        icon.addEventListener('click', function () 
+        icon.addEventListener('click', function () {
             const imageSrc = this.getAttribute('data-image'); // Obținem sursa imaginii
 
             // Creăm un pop-up pentru imagine
             const imageElement = document.createElement('img');
             imageElement.src = imageSrc;
             imageElement.alt = 'Certificate Image';
-            imageElement.style.maxWidth = '100
+            imageElement.style.maxWidth = '100';
             imageElement.style.maxHeight = '80vh';
             imageElement.style.transition = 'transform 0.25s ease';
 
@@ -141,9 +141,9 @@ document.addEventListener('DOMContentLoaded', function () {
             zoomInButtonCert.addEventListener('click', function () {
                 scale *= 1.2;
                 certificateContainer.style.transform = scale(scale);
-            );
+            });
 
-            zoomOutButtonCert.addEventListener('click', function () 
+            zoomOutButtonCert.addEventListener('click', function () {
                 scale /= 1.2;
                 certificateContainer.style.transform = scale({scale});
             });
@@ -153,6 +153,5 @@ document.addEventListener('DOMContentLoaded', function () {
                 certificatePopup.style.display = 'none';
                 certificateContent.innerHTML = ''; // Resetăm conținutul
             });
-        });
-    });
+        }));
 });
