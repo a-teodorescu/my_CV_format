@@ -59,14 +59,14 @@ document.addEventListener('DOMContentLoaded', function () {
         const zoomOutButton = document.getElementById('zoom-out');
         const imageContainer = document.getElementById('image-container');
 
-        zoomInButton.addEventListener('click', function () 
-            scale *= 1.2;
-            imageContainer.style.transform = scale({scale});
-        });
+        zoomInButton.addEventListener('click', function () {
+        scale *= 1.2; // Mărim escala
+        imageContainer.style.transform = `scale(scale)`; // Folosim template literal pentru a aplica transformarea
+);
 
-        zoomOutButton.addEventListener('click', function () {
-            scale /= 1.2;
-            imageContainer.style.transform = scale(${scale});
+        zoomOutButton.addEventListener('click', function () 
+        scale /= 1.2; // Micșorăm scala
+        imageContainer.style.transform = `scale({scale})`; // Folosim template literal pentru a aplica transformarea
 });
 
 
