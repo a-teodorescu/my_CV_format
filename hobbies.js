@@ -1,6 +1,9 @@
 // ------------------- POP-UP pentru Hobbies -------------------
 
 
+// ------------------- POP-UP pentru Hobbies -------------------
+
+javascript
 document.addEventListener('DOMContentLoaded', function() {
     // Selectăm toate iconițele de cameră din secțiunea "Hobbies"
     const cameraIcons = document.querySelectorAll('.hobby-icon');
@@ -20,46 +23,44 @@ document.addEventListener('DOMContentLoaded', function() {
             // Apelăm PHP pentru a obține pozele asociate hobby-ului
             fetch('get_images.php?hobby=${hobby}') // Folosește backticks pentru interpolarea variabilei
                 .then(response => response.json())  // Răspunsul JSON
-                .then(data => {
-                    if (data.length > 0) {
-                        images = data; // Salvăm pozele în array
-                        currentImageIndex = 0; // Resetăm indexul la prima poză
-                        showImage(currentImageIndex)}; // Arătăm prima poză
+                .then(data => {if (data.length > 0) 
+                    images = data; // Salvăm pozele în array
+                    currentImageIndex = 0; // Resetăm indexul la prima poză
+                    showImage(currentImageIndex); // Arătăm prima poză
+                    imagePopup.style.display = 'flex'; // Afișăm pop-up-ul
+        })
+            .catch(error => console.error('Eroare la încărcarea imaginilor:', error));
+    });
+});
 
-                        imagePopup.style.display = 'flex'; // Afișăm pop-up-ul
-                    })
-                .catch(error => 
-                    console.error('Eroare la încărcarea imaginilor:', error)
-                );
-        };
-    };
+// Închidem pop-up-ul când se apasă pe butonul de X
+closeBtn.addEventListener('click', function() {
+    imagePopup.style.display = 'none';
+});
 
-    // Închidem pop-up-ul când se apasă pe butonul de X
-    closeBtn.addEventListener('click', function() 
-        imagePopup.style.display = 'none';
-    );
-
-    // Funcție pentru a arăta imaginea curentă
-    function showImage(index) 
-        if (index >= 0        index < images.length) 
-            popupContent.innerHTML = <img src="images/{images[index]}" alt="Image" style="max-width: 100%; max-height: 80vh;" />;
-        }
+// Funcție pentru a arăta imaginea curentă
+function showImage(index) {
+    if (index >= 0, index < images.length) {
+        popupContent.innerHTML = <img src="images/{images[index]}" alt="Image" style="max-width: 100%; max-height: 80vh;" />;
     }
+}
 
-    // Navigare între imagini
-    document.getElementById('next-btn').addEventListener('click', function() {
-        if (currentImageIndex < images.length - 1) {
-            currentImageIndex++;
-            showImage(currentImageIndex);
-        }
-    });
+// Navigare între imagini
+document.getElementById('next-btn').addEventListener('click', function() {
+    if (currentImageIndex < images.length - 1) {
+        currentImageIndex++;
+        showImage(currentImageIndex);
+    }
+});
 
-    document.getElementById('prev-btn').addEventListener('click', function() {
-        if (currentImageIndex > 0) {
-            currentImageIndex--;
-            showImage(currentImageIndex);
-        }
-    });
+document.getElementById('prev-btn').addEventListener('click', function() {
+    if (currentImageIndex > 0) {
+        currentImageIndex--;
+        showImage(currentImageIndex);
+    }
+});
+
+
 });
 
 
