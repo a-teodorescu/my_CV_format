@@ -18,12 +18,14 @@ document.addEventListener('DOMContentLoaded', function() {
             const hobby = this.getAttribute('data-hobby'); // Obținem hobby-ul asociat iconiței
 
             // Apelăm PHP pentru a obține pozele asociate hobby-ului
-            fetch(get_images.php?hobby=${hobby}).then(response => response.json())
-                .then(data => 
-                    if (data.length > 0) 
+            fetch('get_images.php?hobby=${hobby}') // Folosește backticks pentru interpolarea variabilei
+                .then(response => response.json())  // Răspunsul JSON
+                .then(data => {
+                    if (data.length > 0) {
                         images = data; // Salvăm pozele în array
                         currentImageIndex = 0; // Resetăm indexul la prima poză
                         showImage(currentImageIndex); // Arătăm prima poză
+
                         imagePopup.style.display = 'flex'; // Afișăm pop-up-ul
                     )
                 .catch(error => 
@@ -51,6 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
             showImage(currentImageIndex);
         }
     });
+
     document.getElementById('prev-btn').addEventListener('click', function() {
         if (currentImageIndex > 0) {
             currentImageIndex--;
