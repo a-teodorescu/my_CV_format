@@ -27,12 +27,12 @@ document.addEventListener('DOMContentLoaded', function() {
                         showImage(currentImageIndex); // Arătăm prima poză
 
                         imagePopup.style.display = 'flex'; // Afișăm pop-up-ul
-                    )
+                    }})
                 .catch(error => 
                     console.error('Eroare la încărcarea imaginilor:', error);
                 );
-        );
-    );
+        };
+    };
 
     // Închidem pop-up-ul când se apasă pe butonul de X
     closeBtn.addEventListener('click', function() 
