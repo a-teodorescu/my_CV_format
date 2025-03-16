@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         imagePopup.style.display = 'flex'; // Afișăm pop-up-ul
                     })
                 .catch(error => 
-                    console.error('Eroare la încărcarea imaginilor:', error);
+                    console.error('Eroare la încărcarea imaginilor:', error)
                 );
         };
     };
