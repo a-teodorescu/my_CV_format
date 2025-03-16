@@ -1,5 +1,6 @@
 // ------------------- POP-UP pentru Hobbies -------------------
 
+
 // Obținem toate iconițele de camera (pentru secțiunea de Hobbies)
 const hobbyIcons = document.querySelectorAll('.hobby-icon');
 const hobbyPopup = document.getElementById('hobby-popup');
@@ -13,46 +14,51 @@ let currentImageIndex = 0;
 let hobbyImages = [];
 
 // Când se dă click pe iconița de camera (pentru fiecare hobby)
-hobbyIcons.forEach((icon, index) => {
-    icon.addEventListener('click', function() {
+hobbyIcons.forEach((icon) => {
+    icon.addEventListener('click', function () {
         const hobby = icon.getAttribute('data-hobby'); // Obținem numele hobby-ului
         // Facem o cerere pentru a încărca pozele asociate acestui hobby
         fetch(get_images.php?hobby=${hobby})
-            .then(response => response.json())
-            .then(images => {
+            .then((response) => response.json())
+            .then((images) => {
                 hobbyImages = images; // Stocăm imaginile într-un array
                 currentImageIndex = 0; // Resetăm indexul la prima poză
                 hobbyPopup.style.display = 'flex'; // Afișăm pop-up-ul
                 hobbyPopupImage.src = hobbyImages[currentImageIndex]; // Setăm prima imagine
+            })
+            .catch((error) => {
+                console.error('Eroare la obținerea imaginilor:', error);
             });
     });
 });
 
 // Când se dă click pe butonul de închidere a pop-up-ului
-closeHobbyBtn.addEventListener('click', function() {
+closeHobbyBtn.addEventListener('click', function () {
     hobbyPopup.style.display = 'none'; // Ascundem pop-up-ul
-});
+);
 
 // Când se dă click pe butonul "Next" pentru a trece la următoarea poză
-nextBtn.addEventListener('click', function() {
-
+nextBtn.addEventListener('click', function () 
     if (currentImageIndex < hobbyImages.length - 1) 
         currentImageIndex++;
         hobbyPopupImage.src = hobbyImages[currentImageIndex]; // Schimbăm poza
     );
 
 // Când se dă click pe butonul "Previous" pentru a merge la poza anterioară
-prevBtn.addEventListener('click', function() 
+prevBtn.addEventListener('click', function () 
     if (currentImageIndex > 0) 
         currentImageIndex–;
         hobbyPopupImage.src = hobbyImages[currentImageIndex]; // Schimbăm poza
     );
 
 // Închidem pop-up-ul dacă se face click în afacerea acestuia
-window.addEventListener('click', function(event) 
+window.addEventListener('click', function (event) 
     if (event.target === hobbyPopup) 
         hobbyPopup.style.display = 'none'; // Ascundem pop-up-ul
     );
+
+
+
 
 
 // ------------------- POP-UP pentru Certificates -------------------
