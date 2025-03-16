@@ -464,7 +464,6 @@ body {
     transition: transform 0.3s ease;
     background-color: transparent !important;  /* Înlăturăm fundalul alb */
 }
-}
 
 
 
@@ -579,3 +578,19 @@ body {
     cursor: pointer;
 }
 
+
+
+.nav-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    font-size: 24px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px
+    ;cursor: pointer;
+}

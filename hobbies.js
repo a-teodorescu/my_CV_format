@@ -1,60 +1,93 @@
 // ------------------- POP-UP pentru Hobbies -------------------
 
-// Obținem toate iconițele de hobby
-const hobbyIcons = document.querySelectorAll('.hobby-icon');
-const popup = document.getElementById('popup');
-const popupImage = document.getElementById('popup-image');
-const closeBtn = document.getElementById('popup-close');
-const prevBtn = document.getElementById('prev-image');
-const nextBtn = document.getElementById('next-image');
+document.addEventListener('DOMContentLoaded', function () {
+    // Selectăm toate iconițele de cameră din lista Hobbies
+    const cameraIcons = document.querySelectorAll('.hobby-icon');
 
-// Variabile pentru controlul imaginilor
-let currentImageIndex = 0;
-let images = [];
+    // Selectăm elementele pentru pop-up
+    const imagePopup = document.getElementById('image-popup');
+    const popupContent = document.getElementById('popup-content');
+    const popupImage = document.getElementById('popup-image');
+    const closeBtn = document.getElementById('close-btn');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
 
-// Când se dă click pe iconițele de hobby
-hobbyIcons.forEach(icon => {
-    icon.addEventListener('click', function() {
-        // Obținem imaginile din atributul data-images
-        images = this.getAttribute('data-images').split(',');
-        currentImageIndex = 0; // Începem cu prima imagine
-        popupImage.src = images[currentImageIndex]; // Setăm sursa imaginii
-        popup.style.display = 'flex'; // Afișăm pop-up-ul
+    let currentImageIndex = 0;
+    let imagesArray = [];
+
+    // Când se dă click pe o iconiță de cameră
+    cameraIcons.forEach((icon, index) => {
+        icon.addEventListener('click', function () {
+            const hobby = this.getAttribute('data-hobby');  // Hobby-ul asociat iconiței
+            // Facem un request pentru a obține pozele din folderul asociat hobby-ului
+            fetchImages(hobby);
+        });
+    });
+
+    // Funcția care obține pozele pentru hobby-ul respectiv
+    function fetchImages(hobby) {
+        fetch(get_images.php?hobby=hobby)
+            .then(response => response.json())
+            .then(data => 
+                if (data.error) 
+                    alert(data.error);
+                    return;
+                
+                // Resetăm indexul curent
+                currentImageIndex = 0;
+                imagesArray = data; // Salvează pozele într-un array
+
+                // Afișăm prima poză
+                showImage(currentImageIndex);
+                // Afișăm pop-up-ul
+                imagePopup.style.display = 'flex';
+            )
+            .catch(error => 
+                console.error('Eroare la încărcarea imaginilor:', error);
+            );
+    
+
+    // Funcția care afișează imaginea pe baza indexului
+    function showImage(index) 
+        if (imagesArray.length === 0) return;
+
+        const imageSrc = images/{imagesArray[index]};
+        popupImage.src = imageSrc;
+
+        // Actualizăm butoanele pentru navigare
+        prevBtn.style.display = index === 0 ? 'none' : 'block';
+        nextBtn.style.display = index === imagesArray.length - 1 ? 'none' : 'block';
+    }
+
+    // Eveniment pentru butonul de închidere
+    closeBtn.addEventListener('click', function () {
+        imagePopup.style.display = 'none'; // Închidem pop-up-ul
+    });
+
+    // Eveniment pentru a închide pop-up-ul când se apasă în afara imaginii
+    window.addEventListener('click', function (event) {
+        if (event.target === imagePopup) {
+            imagePopup.style.display = 'none'; // Închidem pop-up-ul
+        }
+    });
+
+    // Eveniment pentru butonul anterior
+    prevBtn.addEventListener('click', function () {
+        if (currentImageIndex > 0) {
+            currentImageIndex--;
+            showImage(currentImageIndex);
+        }
+    });
+
+    // Eveniment pentru butonul următor
+    nextBtn.addEventListener('click', function () {
+        if (currentImageIndex < imagesArray.length - 1) {
+            currentImageIndex++;
+            showImage(currentImageIndex);
+        }
     });
 });
 
-// Când se apasă pe butonul de închidere al pop-up-ului
-closeBtn.addEventListener('click', function() {
-    popup.style.display = 'none'; // Ascundem pop-up-ul
-});
-
-// Când se face click pe imagine pentru zoom in/zoom out
-popupImage.addEventListener('click', function() {
-    if (popupImage.style.transform === 'scale(1.5)') {
-        popupImage.style.transform = 'scale(1)'; // Zoom out
-    } else {
-        popupImage.style.transform = 'scale(1.5)'; // Zoom in
-    }
-});
-
-// Când se apasă pe butonul "Prev" (imaginea anterioară)
-prevBtn.addEventListener('click', function() {
-    currentImageIndex = (currentImageIndex > 0) ? currentImageIndex - 1 : images.length - 1;
-    popupImage.src = images[currentImageIndex];
-});
-
-// Când se apasă pe butonul "Next" (imaginea următoare)
-nextBtn.addEventListener('click', function() {
-    currentImageIndex = (currentImageIndex < images.length - 1) ? currentImageIndex + 1 : 0;
-    popupImage.src = images[currentImageIndex];
-});
-
-// Închidem pop-up-ul dacă se face click în afara imaginii
-window.addEventListener('click', function(event) {
-    if (event.target === popup) {
-        popup.style.display = 'none';
-    }
-});
 
 // ------------------- POP-UP pentru Certificates -------------------
 
