@@ -69,7 +69,6 @@ body {
     line-height: 24px; 
     margin-left: 5px;
 
-<<<<<<< HEAD
 }
 
 .contacts-location
@@ -80,8 +79,6 @@ body {
     font-weight: 400;
     line-height: 24px; 
     margin-left: 5px;    
-=======
->>>>>>> 3531cbb23ac10d52ee8d39b45e9bcbb3ad19d69c
 }
 
 .contacts-element {
@@ -89,10 +86,7 @@ body {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
-<<<<<<< HEAD
     padding-left: 2px;
-=======
->>>>>>> 3531cbb23ac10d52ee8d39b45e9bcbb3ad19d69c
 }
 
 .contacts-element .location 
@@ -376,11 +370,7 @@ body {
 
 
 
-<<<<<<< HEAD
 /*modifica alinierea ":" din sectiunea Contacts*/
-=======
-
->>>>>>> 3531cbb23ac10d52ee8d39b45e9bcbb3ad19d69c
 .contacts-element i {
     font-size: 18px;
     margin-right:4px;
@@ -388,21 +378,13 @@ body {
 }
 
 /* Style for contact elements */
-<<<<<<< HEAD
 .contacts-phone, .contacts-email, .contacts-location, .contacts-link {
-=======
-.contacts-phone, .contacts-email, .contacts-link {
->>>>>>> 3531cbb23ac10d52ee8d39b45e9bcbb3ad19d69c
     font-size: 16px;
     color: #161d2a;
     text-decoration: none;
 }
 
-<<<<<<< HEAD
 .contacts-phone:hover, .contacts-email:hover, .contacts-location:hover, .contacts-link:hover{
-=======
-.contacts-phone:hover, .contacts-email:hover, .contacts-link:hover{
->>>>>>> 3531cbb23ac10d52ee8d39b45e9bcbb3ad19d69c
     text-decoration: none;  /*could be underline*/
     color: #005bb5;
 }
@@ -414,18 +396,11 @@ body {
 /* Social media icons styling */
 .social-icons {
     display: flex;
-<<<<<<< HEAD
     flex-direction: row; /* Am setat directionarea la orizontala */
     justify-content: flex-start; /* Aliniere la stânga */
     gap: 20px;  /* Space between icons */
     margin-top: 20px;
     margin-left: 3px;
-=======
-    flex-direction:row /* Am setat directionarea la orizontala */
-    justify-content: flex-start; /* Aliniere la stânga */
-    gap: 20px;  /* Space between icons */
-    margin-top: 20px;
->>>>>>> 3531cbb23ac10d52ee8d39b45e9bcbb3ad19d69c
 }
 
 .social-icons a {
@@ -529,13 +504,10 @@ body {
     background-color: transparent !important;  /* Înlăturăm fundalul alb */
 }
 
-<<<<<<< HEAD
 /* Cursor pentru zoom-out când imaginea este mărită */
 #popup-image.zoomed-in {
     cursor: zoom-out;
   }
-=======
->>>>>>> 3531cbb23ac10d52ee8d39b45e9bcbb3ad19d69c
 
 
 /* Efect de hover pe imaginea din pop-up */
@@ -618,10 +590,7 @@ body {
 /* Efectul de hover pentru iconițele de camera din lista Hobbies */
 .hobby-item i {
     transition: transform 0.3s ease, color 0.3s ease; /* Efecte pentru transformare si culoare */
-<<<<<<< HEAD
     
-=======
->>>>>>> 3531cbb23ac10d52ee8d39b45e9bcbb3ad19d69c
 }
 
 .hobby-item i:hover {
@@ -654,7 +623,6 @@ body {
 }
 
 
-<<<<<<< HEAD
 .hobby-item {
     cursor: pointer;
     transition: transform 0.3s ease, color 0.3s ease;
@@ -701,20 +669,4 @@ body {
     left: 0;
     height: 100%;
     background: #4489ff;
-=======
-
-.nav-btn:hover {
-    background: rgba(0, 0, 0, 0.8);
-}
-
-.nav-btn {
-    position: absolute;
-    top: 50%;
-    font-size: 24px;
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px
-    ;cursor: pointer;
->>>>>>> 3531cbb23ac10d52ee8d39b45e9bcbb3ad19d69c
 }
