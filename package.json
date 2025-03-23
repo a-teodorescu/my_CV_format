@@ -1,0 +1,20 @@
+{
+  "name": "codedev1.2",
+  "version": "1.0.0",
+  "description": "Link to CV -> https://ateodorescu-cv.netlify.app/",
+  "main": "hobbies.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a-teodorescu/my_CV_format.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/a-teodorescu/my_CV_format/issues"
+  },
+  "homepage": "https://github.com/a-teodorescu/my_CV_format#readme"
+}
