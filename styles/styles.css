@@ -670,3 +670,47 @@ body {
     height: 100%;
     background: #4489ff;
 }
+
+
+
+
+/* Added media query for responsive display */
+@media screen and (max-width: 768px) {
+    .app-wrapper {
+        flex-direction: column;
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    .right-side-container {
+        padding: 40px 20px;
+    }
+
+    .sidebar-section {
+        padding: 20px;
+    }
+
+    .sidebar-section img {
+        width: 100%;
+        margin-top: auto;
+    }
+
+    .language-skills-section {
+        margin-right: 0;
+    }
+
+    .projects-name,
+    .about-me-description {
+        font-size: 1rem;
+    }
+
+    .tech-skills-section,
+    .soft-skills-section,
+    .language-skills-section,
+    .hobbies-section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+}
+
