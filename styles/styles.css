@@ -710,13 +710,9 @@ body {
     }
     
     .contacts-element .location {
-        margin-right: -4px;
+        margin-right: -2px;
     }
 
-    .contacts-element .address {
-        word-break: break-all;
-        display: inline-block;
-    }
 
     .projects-name,
     .about-me-description {
