@@ -96,7 +96,7 @@ body {
 
 .contacts-element .location i
 {
-    padding: 1px;
+    padding: 0;
 }
 
 
@@ -707,7 +707,7 @@ body {
     }
     
     .contacts-element .location {
-        margin-right: -5px;
+        margin-right: -4px;
     }
 
     .projects-name,
