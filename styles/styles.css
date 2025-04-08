@@ -94,7 +94,7 @@ body {
 
 .contacts-element .location 
 {
-    padding-left: 0;
+    padding-right: 0;
 }
 
 .contacts-element .fa-map-marker-alt
@@ -711,12 +711,17 @@ body {
     }
     
     .contacts-element .location {
-        margin-right: -2px;
+        margin-right: -5px;
     }
 
     .contacts-element a {
         font-size: 90%;
     }
+
+    .contacts-element .location a{
+        margin-left: .1rem;
+    }
+
 
 
     .projects-name,
