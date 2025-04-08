@@ -5,6 +5,7 @@ body {
 }
 
 
+
 .app-wrapper {
     display: flex;
     flex-direction: row-reverse;
@@ -42,7 +43,9 @@ body {
     font-weight: 700;
     line-height: normal;
 }
+ 
 
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 .contacts-item {
     color: #161d2a;
     font-size: 14px;
@@ -98,6 +101,8 @@ body {
 {
     padding: 0;
 }
+
+
 
 
 .tech-skills-section {
@@ -673,8 +678,6 @@ body {
 
 
 
-
-/* Added media query for responsive display */
 @media screen and (max-width: 768px) {
     .app-wrapper {
         flex-direction: column;
@@ -710,6 +713,11 @@ body {
         margin-right: -4px;
     }
 
+    .contacts-element .address {
+        word-break: break-all;
+        display: inline-block;
+    }
+
     .projects-name,
     .about-me-description {
         font-size: 1rem;
@@ -724,4 +732,3 @@ body {
     }
     
 }
-
