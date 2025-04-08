@@ -91,12 +91,12 @@ body {
 
 .contacts-element .location 
 {
-    padding-left: 2.5px;
+    padding-left: 1%;
 }
 
 .contacts-element .location i
 {
-    margin-right: 6px;
+    padding: 1px;
 }
 
 
@@ -697,6 +697,17 @@ body {
 
     .language-skills-section {
         margin-right: 0;
+    }
+
+    .contacts-element,
+    .contacts-element .location {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+    }
+    
+    .contacts-element .location {
+        margin-right: -5px;
     }
 
     .projects-name,
