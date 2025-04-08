@@ -94,12 +94,12 @@ body {
 
 .contacts-element .location 
 {
-    padding-left: 2px;
+    padding-left: 3px;
 }
 
 .contacts-element .fa-map-marker-alt
 {
-    margin-left: 2px;
+    margin-left: 0.1rem;
 }
 
 
