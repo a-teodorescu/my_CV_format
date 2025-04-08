@@ -94,12 +94,12 @@ body {
 
 .contacts-element .location 
 {
-    padding-left: 1%;
+    padding-left: 2px;
 }
 
 .contacts-element .location i
 {
-    padding: 0;
+    padding: 1px;
 }
 
 
