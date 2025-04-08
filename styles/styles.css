@@ -713,12 +713,17 @@ body {
         margin-right: -2px;
     }
 
+    .contacts-element a {
+        font-size: 90%;
+    }
+
 
     .projects-name,
     .about-me-description {
         font-size: 1rem;
     }
 
+    .contacts-container,
     .tech-skills-section,
     .soft-skills-section,
     .language-skills-section,
